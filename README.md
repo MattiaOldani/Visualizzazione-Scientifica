@@ -2,7 +2,11 @@
 
 Repository contenente il materiale per la presentazione del corso di Visualizzazione Scientifica
 
-# Membri del gruppo
+## Membri del gruppo
 
-* [Armani Riti Islam](https://github.com/GioarmsCodes)
-* [Mattia Oldani](https://github.com/MattiaOldani)
+* [Armani Riti Islam](https://github.com/GioarmsCodes) [963069]
+* [Mattia Oldani](https://github.com/MattiaOldani) [966668]
+
+## Come popolare il dataset
+
+Una volta entrati nella cartella invocare da terminale `python setup/setup.py` per popolare il file `dataset.csv`
