@@ -20,16 +20,14 @@ for row in data:
         attribute = row["attribute"]
         atk = row["atk"]
         if "Link" in type_:
-            link_value = row["linkval"]
             cards.append(LinkCard(
-                name, type_, race, prices, atk, attribute, link_value
+                name, type_, race, prices, atk, attribute
             ))
         else:
             def_ = row["def"]
             if "Pendulum" in type_:
-                scale = row["scale"]
                 cards.append(PendulumCard(
-                    name, type_, race, prices, atk, attribute, scale, def_
+                    name, type_, race, prices, atk, attribute, def_
                 ))
             else:
                 level = row["level"]

@@ -17,7 +17,7 @@ class SpellTrapCard(Card):
         Card.__init__(self, name, type_, race, prices)
     
     def __str__(self):
-        return f"{self.name};{self.type};;{self.race};;;;;;{self.cardmarket};{self.tcg};{self.ebay};{self.amazon};{self.coolstuffinc}"
+        return f"{self.name};{self.type};;{self.race};;;;{self.cardmarket};{self.tcg};{self.ebay};{self.amazon};{self.coolstuffinc}"
 
 
 # Carta mostro generica
@@ -36,25 +36,23 @@ class MonsterCard(GenericMonsterCard):
         self.def_ = def_
     
     def __str__(self):
-        return f"{self.name};{self.type};{self.attribute};{self.race};{self.level};;{self.atk};{self.def_};;{self.cardmarket};{self.tcg};{self.ebay};{self.amazon};{self.coolstuffinc}"
+        return f"{self.name};{self.type};{self.attribute};{self.race};{self.level};{self.atk};{self.def_};{self.cardmarket};{self.tcg};{self.ebay};{self.amazon};{self.coolstuffinc}"
 
 
 # Carta mostro pendulum
 class PendulumCard(GenericMonsterCard):
-    def __init__(self, name, type_, race, prices, atk, attribute, scale, def_):
+    def __init__(self, name, type_, race, prices, atk, attribute, def_):
         GenericMonsterCard.__init__(self, name, type_, race, prices, atk, attribute)
-        self.scale = scale
         self.def_ = def_
     
     def __str__(self):
-        return f"{self.name};{self.type};{self.attribute};{self.race};;{self.scale};{self.atk};{self.def_};;{self.cardmarket};{self.tcg};{self.ebay};{self.amazon};{self.coolstuffinc}"
+        return f"{self.name};{self.type};{self.attribute};{self.race};;{self.atk};{self.def_};{self.cardmarket};{self.tcg};{self.ebay};{self.amazon};{self.coolstuffinc}"
 
 
 # Carta mostro link
 class LinkCard(GenericMonsterCard):
-    def __init__(self, name, type_, race, prices, atk, attribute, link_value):
+    def __init__(self, name, type_, race, prices, atk, attribute):
         GenericMonsterCard.__init__(self, name, type_, race, prices, atk, attribute)
-        self.link_value = link_value
     
     def __str__(self):
-        return f"{self.name};{self.type};{self.attribute};{self.race};;;{self.atk};;{self.link_value};{self.cardmarket};{self.tcg};{self.ebay};{self.amazon};{self.coolstuffinc}"
+        return f"{self.name};{self.type};{self.attribute};{self.race};;{self.atk};;{self.cardmarket};{self.tcg};{self.ebay};{self.amazon};{self.coolstuffinc}"
