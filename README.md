@@ -9,4 +9,8 @@ Repository contenente il materiale per la presentazione del corso di Visualizzaz
 
 ## Come popolare il dataset
 
-Una volta entrati nella cartella invocare da terminale `python setup/setup.py` per popolare il file `dataset.csv`
+
+Una volta entrati nella cartella invocare da terminale
+	`pip install -r requirements.txt` per installare i pacchetti necessari.
+	Come secondo comando invocare `python setup/setup.py` per popolare il file `dataset.csv`
+	
