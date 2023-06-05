@@ -7,7 +7,8 @@ SEARCH = {
     "Hyper Metamorphosis" : "razza",
     "Blue-Eyes White Dragon" : "livello",
     "Askaan the Bicorned Ghoti" : "attacco",
-    "Allvain the Essence of Vanity" : "difesa"
+    "Allvain the Essence of Vanity" : "difesa",
+    "Dark Magician" : "dataset"
 }
 
 data = requests.get("https://db.ygoprodeck.com/api/v7/cardinfo.php").json()["data"]
