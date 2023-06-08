@@ -4,7 +4,6 @@ from card import SpellTrapCard, MonsterCard, PendulumCard, LinkCard
 
 data = requests.get("https://db.ygoprodeck.com/api/v7/cardinfo.php").json()["data"]
 
-
 cards = list()
 for row in data:
     name = row["name"]
@@ -38,6 +37,10 @@ for row in data:
         cards.append(SpellTrapCard(name, type_, race, prices))
 
 
-with open("dataset.csv", "a") as f:
+with open("dataset.csv", "r") as f:
+    first_line = f.readline().strip()
+
+with open("dataset.csv", "w") as f:
+    f.write(first_line + "\n")
     for row in cards:
         f.write(row.__str__() + "\n")
